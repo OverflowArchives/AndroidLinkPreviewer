@@ -21,6 +21,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadUrl(loadUrl: String) {
 
+        link_preview_plain_link_preview.loadUrl(loadUrl, object : ViewListener {
+            override fun onPreviewSuccess(status: Boolean) {
+            }
+
+            override fun onFailedToLoad(e: Exception?) {
+
+            }
+        })
+
         link_preview_whatsapp.loadUrl(loadUrl, object : ViewListener {
             override fun onPreviewSuccess(status: Boolean) {
             }

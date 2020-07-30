@@ -4,30 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue_grey_300"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/link_input"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/load_button"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Load Preview"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/link_input"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@id/link_input"
         app:layout_constraintEnd_toEndOf="@id/link_input"
-        android:layout_height="wrap_content"/>
+        app:layout_constraintStart_toStartOf="@id/link_input"
+        app:layout_constraintTop_toBottomOf="@id/link_input" />
+
     <ScrollView
-        app:layout_constraintTop_toBottomOf="@id/load_button"
         android:layout_width="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_height="0dp"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/load_button">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,53 +39,68 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Whatsapp"
-                android:textSize="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content"/>
-
-            <com.overflowarchives.linkpreview.WhatsappPreview
-                android:id="@+id/link_preview_whatsapp"
                 android:layout_marginTop="10dp"
+                android:text="Plain Preview"
+                android:textSize="20dp" />
+
+            <com.overflowarchives.linkpreview.PlainLinkPreview
+                android:id="@+id/link_preview_plain_link_preview"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Skype"
-                android:textSize="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="10dp"
+                android:text="Whatsapp"
+                android:textSize="20dp" />
+
+            <com.overflowarchives.linkpreview.WhatsappPreview
+                android:id="@+id/link_preview_whatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Skype"
+                android:textSize="20dp" />
 
             <com.overflowarchives.linkpreview.SkypePreview
                 android:id="@+id/link_preview_skype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Telegram"
-                android:textSize="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="10dp"
+                android:text="Telegram"
+                android:textSize="20dp" />
 
             <com.overflowarchives.linkpreview.TelegramPreview
                 android:id="@+id/link_preview_telegram"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="Twitter"
-                android:textSize="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_height="wrap_content"/>
+                android:layout_marginTop="10dp"
+                android:text="Twitter"
+                android:textSize="20dp" />
+
             <com.overflowarchives.linkpreview.TwitterPreview
                 android:id="@+id/link_preview_twitter"
                 android:layout_width="match_parent"
